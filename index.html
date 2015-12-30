@@ -1,0 +1,34 @@
+<!--This is a modified version of http://jsfiddle.net/jbustos/5zgv2j34/-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Highlight Selected List">
+  <meta name="author" content="Natalie Chin">
+
+  <title>Highlight Selected List</title>
+
+  <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+  <ul data-bind="foreach: peopleList">
+    <li data-bind="text: name, click: $parent.select,
+           css: {red: $data == $parent.selectedPerson()}" ></li>
+    <!--<li data-bind="text: name, click: $parent.select,
+           css: {red: $data == $parent.selectedPerson()}" >
+    </li>-->
+  </ul>
+
+  <script src="bower_components/knockout/dist/knockout.js"></script>
+  <script src="bower_components/jquery/dist/jquery.js"></script>
+  <script src="app.js"></script>
+
+  </body>
+
+</html>
